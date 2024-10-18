@@ -133,26 +133,39 @@ nav ul  button{
     display: flex;
     justify-content: center;
     position: relative;
+    font-size:2vw;
     width: 16vw;
     height: 6vw;
     border: 1.5px solid #B86234;
     border-radius: 1vw;
 }
 
-.dropdown-city select{
+.dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
     width: 100%;
-    background: none;
-    border: none;
-    padding-left: 2vw;
-    appearance: none;
-    border-radius: 1vw;
-    font-size: 2vw;
+    top: 40px;
+    left: 0;
+    z-index: 1;
 }
 
-.dropdown-city select option{
-    padding-right: 4vw;
-    appearance: none;
+.dropdown-list li {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    text-align: center;
+    background-image: url('asset/trichy.png');
 }
+
+.dropdown-list li:hover {
+    background-color: none;
+    color: white;
+}
+
 
 /* grid */
 .grid {
@@ -169,11 +182,5 @@ nav ul  button{
     font-size: 1.6vw;
     font-weight: 600;
     text-align: left;
-}
-#drop-icon{
-    height: 1vw;
-    position: absolute;
-    right: 1vw;
-    top: 2.5vw;
 }
 

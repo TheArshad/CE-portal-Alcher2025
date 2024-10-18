@@ -58,12 +58,20 @@
 
             
             <div class="dropdown-city">
-                <img id="drop-icon" src="asset/drop-icon.png" alt="">
-                <select class="select-box" id="city-select" onchange="updateFestData()">
-                    <option value="trichy">Trichy</option>
-                    <option value="delhi">Delhi</option>
-                    <option value="chennai">Chennai</option>
-                </select>
+                <div class="dropdown-header" id="selected-city" onclick="toggleDropdown()">
+                    <img src="trichy.png" alt="Trichy" id="selected-city-image" />
+                </div>
+                <ul class="dropdown-list" id="dropdown-list">
+                    <li onclick="selectCity('Trichy', 'trichy.png')">
+                        <img src="trichy.png" alt="Trichy" />
+                    </li>
+                    <li onclick="selectCity('Delhi', 'trichy.png')">
+                        <img src="trichy.png" alt="Delhi" />
+                    </li>
+                    <li onclick="selectCity('Chennai', 'trichy.png')">
+                        <img src="trichy.png" alt="Chennai" />
+                    </li>
+                </ul>
             </div>
         </div>
 
