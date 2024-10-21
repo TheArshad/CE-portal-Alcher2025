@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>City-elemination portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+
+<body style="width: 100vw;">
     <nav>
         <div class="nav-logo">
             <img src="asset/alcher-logo.png" alt="">
@@ -23,28 +25,42 @@
     </nav>
 
     <div class="alcheringa-iitg-header">
-        
+        <div class="highway-to-alcher-header">
+            <div class="highway-to-alcher-inner">
+                <img src="asset/header-logo.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="registeration-city">
+        <img src="asset/register-bg.png" alt="">
     </div>
 
     <div class="para-2">
         <img src="./asset/para-2-about-alcher-highway.png" alt="">
-        <div id="about"  class="about-alcher">
-           <div class="about-alcher-inner">
-            <h2 >ABOUT ALCHERINGA</h2>
-            <p class="disc-para-2">
-                Alcheringa is the annual cultural festival of the Indian Institute of Technology (IIT), Guwahati. Started in 1996 by a group of students, Alcheringa, IIT Guwahati has become one of Asia’s most significant college-level cultural fests. Spread over three days and four nights, Alcheringa attracts people from all over the world with its spectacular events and competitions.
-            </p>
-           </div>
+        <div id="about" class="about-alcher">
+            <div class="about-alcher-inner">
+                <h2>ABOUT ALCHERINGA</h2>
+                <p class="disc-para-2">
+                    Alcheringa is the annual cultural festival of the Indian Institute of Technology (IIT), Guwahati.
+                    Started in 1996 by a group of students, Alcheringa, IIT Guwahati has become one of Asia’s most
+                    significant college-level cultural fests. Spread over three days and four nights, Alcheringa
+                    attracts people from all over the world with its spectacular events and competitions.
+                </p>
+            </div>
         </div>
 
         <div id="highway" class="about-alcher">
             <div class="about-alcher-inner">
-             <h2 >Highway to Alcheringa</h2>
-             <p class="disc-para-2">
-                Do you think you are the best in your city and want to compete with the best of the rest of the cities in the country? With the vision of giving everyone a platform to compete at a national level by bringing in only the best talent from all over India to Alcheringa IIT Guwahati, we present to you the City Auditions known as "Highway to Alcher".
-             </p>
+                <h2>Highway to Alcheringa</h2>
+                <p class="disc-para-2">
+                    Do you think you are the best in your city and want to compete with the best of the rest of the
+                    cities in the country? With the vision of giving everyone a platform to compete at a national level
+                    by bringing in only the best talent from all over India to Alcheringa IIT Guwahati, we present to
+                    you the City Auditions known as "Highway to Alcher".
+                </p>
             </div>
-         </div>
+        </div>
     </div>
 
     <div class="city-and-event-info">
@@ -56,20 +72,21 @@
                 </p>
             </div>
 
-            
+
             <div class="dropdown-city">
-                <div class="dropdown-header" id="selected-city" onclick="toggleDropdown()">
-                    <img src="trichy.png" alt="Trichy" id="selected-city-image" />
-                </div>
+                    <div class="dropdown-header" id="selected-city" onclick="toggleDropdown()">
+                        
+                    </div>
+                
                 <ul class="dropdown-list" id="dropdown-list">
-                    <li onclick="selectCity('Trichy', 'trichy.png')">
-                        <img src="trichy.png" alt="Trichy" />
+                    <li onclick="selectCity('Trichy')">
+                        
                     </li>
-                    <li onclick="selectCity('Delhi', 'trichy.png')">
-                        <img src="trichy.png" alt="Delhi" />
+                    <li onclick="selectCity('Delhi')">
+                        
                     </li>
-                    <li onclick="selectCity('Chennai', 'trichy.png')">
-                        <img src="trichy.png" alt="Chennai" />
+                    <li onclick="selectCity('Chennai')">
+                        
                     </li>
                 </ul>
             </div>
@@ -82,4 +99,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

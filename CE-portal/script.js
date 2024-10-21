@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownList = document.getElementById('dropdown-list');
     dropdownList.style.display = 'none'; 
     selectCity('Trichy');
+
+    
 });
 
 
@@ -62,8 +64,14 @@ function updateDropdownList(selectedCity) {
     Object.keys(festData).forEach(city => {
         if (city !== selectedCity.toLowerCase()) {
             const cityItem = document.createElement('li');
-            cityItem.textContent = city.charAt(0).toUpperCase() + city.slice(1); // Capitalize the first letter
-            cityItem.onclick = () => selectCity(city.charAt(0).toUpperCase() + city.slice(1)); // Set click handler
+            // styling
+            cityItem.style.marginTop = '2vw';
+            // cityItem.style.fontSize = '1px';
+            // cityItem.style.backgroundImage = "url(img)" ;
+            cityItem.textContent = city.charAt(0).toUpperCase() + city.slice(1); // Capitalize the first lette
+            cityItem.onclick = () => selectCity(city.charAt(0).toUpperCase() + city.slice(1) ); // Set click handler
+            // cityItem.onclick = () => selectCity(city); // Set click handler
+
             dropdownList.appendChild(cityItem);
         }
     });
@@ -81,6 +89,10 @@ function selectCity(city) {
     data.forEach(item => {
         const eventDiv = document.createElement('div');
         const dateDiv = document.createElement('div');
+
+        // styling
+        eventDiv.style.marginLeft = '7vw';
+        dateDiv.style.marginLeft = '7vw';
         eventDiv.textContent = item.event;
         dateDiv.textContent = item.date;
         grid.appendChild(eventDiv);
@@ -98,3 +110,5 @@ function selectCity(city) {
 document.addEventListener('DOMContentLoaded', () => {
     selectCity('Trichy');
 });
+
+
