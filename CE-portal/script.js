@@ -1,3 +1,6 @@
+
+
+
 // Ensure dropdown is hidden on page load
 
 
@@ -93,6 +96,11 @@ function selectCity(city) {
         // styling
         eventDiv.style.marginLeft = '7vw';
         dateDiv.style.marginLeft = '7vw';
+        // eventDiv.style.fontWeight = '800';
+        dateDiv.style.fontWeight = '200';
+        dateDiv.style.fontFamily = 'Carltine'
+        eventDiv.style.fontFamily = 'CarltineBold';
+
         eventDiv.textContent = item.event;
         dateDiv.textContent = item.date;
         grid.appendChild(eventDiv);
