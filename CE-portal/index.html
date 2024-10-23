@@ -27,74 +27,98 @@
     <div class="alcheringa-iitg-header">
         <div class="highway-to-alcher-header">
             <div class="highway-to-alcher-inner">
-                <img src="asset/header-logo.png" alt="">
+                <!-- <img src="asset/header-logo.png" alt=""> -->
+                <div class="Alcheringa-IITG">
+                    ALCHERINGA<p>
+                        IIT Guwahati
+                    </p>
+                </div>
+
+                <div class="presents">
+                    Presents
+                </div>
+
+                <div class="imgHighway">
+
+                </div>
             </div>
         </div>
     </div>
 
     <div class="registeration-city">
-        <img src="asset/register-bg.png" alt="">
-    </div>
+        <!-- <img src="asset/register-bg.png" alt=""> -->
+        <div class="dropdown-city">
+            <div class="dropdown-header"  >
 
-
-    <div class="para-2">
-        <div id="about" class="about-alcher">
-            <div class="about-alcher-inner">
-                <h2>ABOUT ALCHERINGA</h2>
-                <p class="disc-para-2">
-                    Alcheringa is the annual cultural festival of the Indian Institute of Technology (IIT), Guwahati.
-                    Started in 1996 by a group of students, Alcheringa, IIT Guwahati has become one of Asia’s most
-                    significant college-level cultural fests. Spread over three days and four nights, Alcheringa
-                    attracts people from all over the world with its spectacular events and competitions.
-                </p>
             </div>
-        </div>
-
-        <div id="highway" class="about-alcher">
-            <div class="about-alcher-inner">
-                <h2>Highway to Alcheringa</h2>
-                <p class="disc-para-2">
-                    Do you think you are the best in your city and want to compete with the best of the rest of the
-                    cities in the country? With the vision of giving everyone a platform to compete at a national level
-                    by bringing in only the best talent from all over India to Alcheringa IIT Guwahati, we present to
-                    you the City Auditions known as "Highway to Alcher".
-                </p>
-            </div>
+            <ul class="dropdown-list" id="dropdown-list">
+                <li >Delhi</li>
+                <li >Chennai</li>
+                <li >Mumbai</li>
+            </ul>
         </div>
     </div>
 
 
-    <div class="city-and-event-info">
-        <div class="festflow-dropdown">
-            <div class="festflow-header">
-                FEST-FLOW
-                <p>
-                    Navigating through the frenzy!
-                </p>
+    <div class="masterdiv">
+        <div class="para-2">
+            <div id="about" class="about-alcher">
+                <div class="about-alcher-inner">
+                    <h2>ABOUT ALCHERINGA</h2>
+                    <p class="disc-para-2">
+                        Alcheringa is the annual cultural festival of the Indian Institute of Technology (IIT),
+                        Guwahati.
+                        Started in 1996 by a group of students, Alcheringa, IIT Guwahati has become one of Asia’s most
+                        significant college-level cultural fests. Spread over three days and four nights, Alcheringa
+                        attracts people from all over the world with its spectacular events and competitions.
+                    </p>
+                </div>
             </div>
 
+            <div id="highway" class="about-alcher">
+                <div class="about-alcher-inner">
+                    <h2>Highway to Alcheringa</h2>
+                    <p class="disc-para-2">
+                        Do you think you are the best in your city and want to compete with the best of the rest of the
+                        cities in the country? With the vision of giving everyone a platform to compete at a national
+                        level
+                        by bringing in only the best talent from all over India to Alcheringa IIT Guwahati, we present
+                        to
+                        you the City Auditions known as "Highway to Alcher".
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            <div class="dropdown-city">
-                <div class="dropdown-header" id="selected-city" onclick="toggleDropdown()">
 
+        <div class="city-and-event-info">
+            <div class="festflow-dropdown">
+                <div class="festflow-header">
+                    FEST-FLOW
+                    <p>
+                        Navigating through the frenzy!
+                    </p>
                 </div>
 
-                <ul class="dropdown-list" id="dropdown-list">
-                    <li onclick="selectCity('Trichy')">
+                <!-- <div class="drop-icon">
+                    <img onclick="toggleDropdown()" width="20vw" src="asset/drop-icon.png" alt="">
+                </div> -->
 
-                    </li>
-                    <li onclick="selectCity('Delhi')">
+                <div class="dropdown-city">
+                    <div class="dropdown-header" id="selected-city" onclick="toggleDropdown()">
 
-                    </li>
-                    <li onclick="selectCity('Chennai')">
-
-                    </li>
-                </ul>
+                    </div>
+                    <ul class="dropdown-list" id="dropdown-list">
+                        <li onclick="selectCity('Delhi')">Delhi</li>
+                        <li onclick="selectCity('Chennai')">Chennai</li>
+                        <li onclick="selectCity('Mumbai')">Mumbai</li>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="grid" id="fest-grid">
-            <!-- The fest data will be dynamically updated here -->
+            <div class="grid" id="fest-grid">
+                <!-- The fest data will be dynamically updated here -->
+            </div>
         </div>
     </div>
 

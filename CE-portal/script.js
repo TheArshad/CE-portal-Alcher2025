@@ -2,14 +2,10 @@
 
 
 // Ensure dropdown is hidden on page load
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const dropdownList = document.getElementById('dropdown-list');
-    dropdownList.style.display = 'none'; 
+    dropdownList.style.display = 'none';
     selectCity('Trichy');
-
-    
 });
 
 
@@ -52,6 +48,8 @@ const festData = {
 function toggleDropdown() {
     const dropdownList = document.getElementById('dropdown-list');
     if (dropdownList.style.display === 'block') {
+        
+
         dropdownList.style.display = 'none';
     } else {
         dropdownList.style.display = 'block';
@@ -68,11 +66,11 @@ function updateDropdownList(selectedCity) {
         if (city !== selectedCity.toLowerCase()) {
             const cityItem = document.createElement('li');
             // styling
-            cityItem.style.marginTop = '2vw';
+            // cityItem.style.marginTop = '2vw';
             // cityItem.style.fontSize = '1px';
             // cityItem.style.backgroundImage = "url(img)" ;
             cityItem.textContent = city.charAt(0).toUpperCase() + city.slice(1); // Capitalize the first lette
-            cityItem.onclick = () => selectCity(city.charAt(0).toUpperCase() + city.slice(1) ); // Set click handler
+            cityItem.onclick = () => selectCity(city.charAt(0).toUpperCase() + city.slice(1)); // Set click handler
             // cityItem.onclick = () => selectCity(city); // Set click handler
 
             dropdownList.appendChild(cityItem);
@@ -83,8 +81,8 @@ function updateDropdownList(selectedCity) {
 // Update the grid with fest data for the selected city
 function selectCity(city) {
     const selectedCity = document.getElementById('selected-city');
-    selectedCity.textContent = city; // Change the dropdown header to the selected city
-    
+    selectedCity.textContent = city + ""; // Change the dropdown header to the selected city
+
     const grid = document.getElementById('fest-grid');
     grid.innerHTML = ''; // Clear existing grid data
 
@@ -94,8 +92,8 @@ function selectCity(city) {
         const dateDiv = document.createElement('div');
 
         // styling
-        eventDiv.style.marginLeft = '7vw';
-        dateDiv.style.marginLeft = '7vw';
+        eventDiv.style.marginLeft = '2vw';
+        dateDiv.style.marginLeft = '5vw';
         // eventDiv.style.fontWeight = '800';
         dateDiv.style.fontWeight = '200';
         dateDiv.style.fontFamily = 'Carltine'
@@ -120,3 +118,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+document.addEventListener('scroll', function() {
+    const parent = document.querySelector('#ye-wala');
+    const items = document.querySelectorAll('.cartsdiv');
+  
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      
+      if (rect.bottom <= window.innerHeight && rect.top >= 0) {
+        // The current item fits the viewport
+        parent.scrollBy(0, window.innerHeight);  // Scroll to the next item
+      }
+    });
+  });
+  
