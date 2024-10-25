@@ -178,6 +178,7 @@ nav ul  button{
 
 /* para 2 */
 body{
+    
     background-color: #F1D7AC;
 }
 
@@ -478,9 +479,7 @@ body{
     z-index: 30;
     position: relative;
     font-weight: 100;
-
-
-
+    width: 30vw;
 }
 
 .sponsor .sponsor-images{
