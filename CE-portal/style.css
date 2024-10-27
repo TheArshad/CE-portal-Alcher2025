@@ -657,10 +657,155 @@ body{
     left: 8vw;
 }
 
+.mobile-only{
+    display: none;
+}
+
+
+/* 430 375 */
+
+
+@media screen and (max-width:500px){
+
+.desktop-only{
+    display: none;
+}
+    
+.mobile-only{
+    display: block;
+}
+
+.aftermovie{
+    width: 100%;
+    height: 170vw;
+    position: relative;
+}
+/* .aftermovie::before{
+    position: absolute;
+    width: 100%;
+    height: 170vw;
+    background: url(asset/ce\ texture.png) center no-repeat ;
+    content: '';
+  
+    mix-blend-mode: overlay;
+    opacity: 50%;
+    z-index: 1;
+
+} */
+#aftermovie-text{
+    font-family: 'Bosten';
+    font-weight: 100;
+    font-size: 6vw;
+    color: #330307;
+    position: absolute;
+    top: 5vw;
+    left: 8vw;
+}
+.aftermovie iframe{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    /* scale: 1.4;
+     */
+     width: 90vw;
+     height: 60vw;
+    z-index: 20;
+}
+.aftermovie .bottom{
+    position: absolute;
+    height: 80vw;
+    bottom: 0;
+    width: 100%;
+    background-color: #240703;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.aftermovie .bottom .foo-top{
+    width: 100%;
+    height: 50%;
+    margin-top: -2.5vw;
+    /* background-color: red; */
+    display: flex;
+    color: #D9D9D9;
+    justify-content: space-around;
+    font-family: 'Carltine';
+
+}
+.aftermovie .foo-top-left{
+    padding-top: 10vw;
+    list-style: none ;
+}
+
+.aftermovie .foo-top-left ul li{
+    list-style: none ;
+    padding: 2vw 0vw;
+    font-weight: 100;
+}
+.aftermovie .foo-top-right{
+    padding-top: 8vw;
+    list-style: none ;
+    margin-left: -5vw;
+    text-align: left;
+}
+.aftermovie .foo-top-right .head{
+    padding: 2vw 0vw;
+
+}
+.aftermovie .foo-top-right .head p{
+    padding: 0.4vw;
+    text-align: left;
+
+}
+.aftermovie .foo-top-right .head p:nth-child(1){
+    font-size: 3.6vw;
+}
+.aftermovie .foo-top-right .head p:nth-child(2){
+    padding-left: 13vw;
+    font-size: 2.9vw;
+}
+.aftermovie .foo-top-right .head p:nth-child(3){
+    font-size: 2.9vw;
+    padding-left: 4vw;
+    display: flex;
+
+}
+.aftermovie .foo-top-right .head i{
+    padding-right: 2vw;
+    color: #D9D9D9;
+}
+
+.aftermovie .bottom .foo-bottom  ul{
+    position: absolute;
+    left: 27vw;
+    padding-top: 6vw;
+    color: white;
+}
+.aftermovie .bottom .foo-bottom  ul a img{
+    width: 6vw;
+    z-index: 100;
+    position: relative;
+    padding: 0 1vw;
+}
+
+.head i{
+    color: white;
+    width: 2vw;
+    display: block;
+}
+#mobile-alcher{
+    z-index: 40;
+    position: absolute;
+    left: 15vw;
+    scale: 0.8;
+    bottom: 7vw;
+}
 
 
 
-
+}
 
 
 
