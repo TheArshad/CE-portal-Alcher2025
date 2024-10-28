@@ -527,6 +527,17 @@ body{
     z-index: 20;
 }
 
+
+@font-face {
+    font-family: myfont;
+    src: url(asset/CarltineLight-rgjVL.ttf);
+}
+@font-face {
+    font-family: myfont2;
+    src: url(asset/CarltineRegular-K7z5l.ttf);
+}
+
+
 .aftermovie .bottom{
     position: absolute;
     bottom: 4vw;
@@ -535,6 +546,20 @@ body{
     background-color: #240703;
     z-index: 30;
     display: flex;
+    font-family: myfont;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 100;
+}
+.aftermovie .bottom::before{
+    /* bottom: 4vw; */
+    height: 20vw;
+    width: 100%;
+    position: absolute;
+    background: url(asset/ce\ texture.png) center no-repeat ;
+    content: '';
+    mix-blend-mode: overlay;
+    opacity: 50%;
+    z-index: 0;
 }
 .aftermovie .bottom .foo-left{
     height: 100%;
@@ -543,15 +568,26 @@ body{
     /* background-color: red; */
 }
 
+
+
+
+
 .aftermovie .bottom .foo-left ul li{
-    font-family: 'Carltine';
+    font-family: myfont;
     margin: 1vw;
     list-style: none;
     font-weight: 100;
     font-size: 1.2vw;
+    position: relative;
+    z-index: 99;
     /* line-height: 22px; */
     color: #D9D9D9;
 }
+
+.aftermovie .bottom .foo-left ul a{
+    text-decoration: none;
+}
+
 .aftermovie .bottom .foo-left ul {
     position: absolute;
     right: 10vw;
@@ -598,13 +634,16 @@ body{
     left: 50%;
     transform: translateX(-50%);
     color: white;
-}
-.aftermovie .bottom .foo-middle  ul a img{
-    width: 1.5vw;
+    /* background-color: red; */
+    display: flex;
 }
 
+
 .aftermovie .bottom .foo-middle  ul a {
-    padding: 0.1vw;
+    padding: 0.05vw;
+    scale: 0.7;
+   
+   
 }
 
 
@@ -624,6 +663,7 @@ body{
     top: 12vw;
     margin-left: 3vw;
     font-weight: 100;
+    /* font-family: myfont2; */
 }
 .aftermovie .bottom .foo-right .head-names{
     font-size: 1vw;
@@ -631,13 +671,16 @@ body{
     position: absolute;
     top: 14vw;
     margin-left: 2vw;
-    font-family: 'Carltine';
+    font-family: myfont;
     display: flex;
 
 }
 .aftermovie .bottom .foo-right .head-names .head{
     margin: 0.3vw 1vw;
     color: #D9D9D9;
+}
+.aftermovie .bottom .foo-right .head-names .head p:nth-child(1){
+    font-family: myfont2;
 }
 .aftermovie .bottom .foo-right .head-names .head p:nth-child(2){
     color: #D9D9D980;
@@ -692,6 +735,19 @@ body{
     z-index: 1;
 
 } */
+
+.aftermovie::before{
+    position: absolute;
+    width: 100%;
+    height: 90vw;
+    background: url(asset/ce\ texture.png) center no-repeat ;
+    content: '';
+  
+    mix-blend-mode: overlay;
+    opacity: 50%;
+    z-index: 1;
+
+}
 #aftermovie-text{
     font-family: 'Bosten';
     font-weight: 100;
@@ -722,6 +778,9 @@ body{
     display: flex;
     flex-direction: column;
 }
+.aftermovie .bottom::before{
+    height: 80vw;
+}
 
 .aftermovie .bottom .foo-top{
     width: 100%;
@@ -731,7 +790,7 @@ body{
     display: flex;
     color: #D9D9D9;
     justify-content: space-around;
-    font-family: 'Carltine';
+    font-family: myfont2;
 
 }
 .aftermovie .foo-top-left{
@@ -742,9 +801,19 @@ body{
 .aftermovie .foo-top-left ul li{
     list-style: none ;
     padding: 2vw 0vw;
+    position: relative;
+    z-index: 99;
+    text-decoration: none;
     font-weight: 100;
 }
+.aftermovie .foo-top-left ul a{
+    text-decoration: none;
+    color: #D9D9D9;
+
+}
 .aftermovie .foo-top-right{
+    position: relative;
+    z-index: 99;
     padding-top: 8vw;
     list-style: none ;
     margin-left: -5vw;
@@ -752,23 +821,28 @@ body{
 }
 .aftermovie .foo-top-right .head{
     padding: 2vw 0vw;
+    text-align: right;
 
 }
 .aftermovie .foo-top-right .head p{
     padding: 0.4vw;
-    text-align: left;
+    text-align: right;
 
 }
 .aftermovie .foo-top-right .head p:nth-child(1){
     font-size: 3.6vw;
+    font-family: 'Carltine';
+
 }
 .aftermovie .foo-top-right .head p:nth-child(2){
-    padding-left: 13vw;
+    /* padding-left: 13vw; */
     font-size: 2.9vw;
+    font-family: myfont;
 }
 .aftermovie .foo-top-right .head p:nth-child(3){
     font-size: 2.9vw;
-    padding-left: 4vw;
+    font-family: myfont;
+    /* padding-left: 4vw; */
     display: flex;
 
 }
@@ -780,7 +854,7 @@ body{
 .aftermovie .bottom .foo-bottom  ul{
     position: absolute;
     left: 27vw;
-    padding-top: 6vw;
+    padding-top: 5vw;
     color: white;
 }
 .aftermovie .bottom .foo-bottom  ul a img{
@@ -789,7 +863,32 @@ body{
     position: relative;
     padding: 0 1vw;
 }
+/* .aftermovie .bottom .foo-bottom  ul a img:nth-child(3){
+    color: red;
+} */
 
+
+#fb{
+    width: 3vw;
+}
+#yt{
+    /* padding-bottom: 0.3vw; */
+    width: 7vw;
+}
+#phone{
+    padding-right: 1vw;
+    /* padding-bottom: 0.5vw; */
+}
+.para{
+    text-align: right;
+    position: relative;
+    left: 0vw;
+}
+.para2{
+    text-align: right;
+    position: relative;
+    left: 1vw;
+}
 .head i{
     color: white;
     width: 2vw;
